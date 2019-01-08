@@ -1,0 +1,3 @@
+#!/bin/sh -eux
+exec chpst -u nobody -U nobody -e ./env \
+    /package/curvedns/bin/curvedns 0.0.0.0 5300 127.0.0.1 53

@@ -1,0 +1,3 @@
+#!/bin/sh -eux
+exec chpst -U tinydns -e ./env -d 300000 \
+    /usr/bin/tinydns
