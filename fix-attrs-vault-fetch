@@ -1,0 +1,1 @@
+/etc/services.d/vault-fetch/workdir true tinydns 0600 0700

@@ -1,4 +1,4 @@
-#!/bin/sh -eux
-mkdir -p workdir
-chown -R tinydns: workdir /service/tinydns/root
-exec chpst -u tinydns -e ./env ./service.sh
+#!/bin/execlineb -P
+s6-setuidgid tinydns
+s6-envdir ./env
+./service.sh

@@ -10,7 +10,7 @@ _version() {
 _install() {
     echo 1>&2 "installing data version $(_version "$1")"
     jq -r '.data.data.cdb_base64' "$1" | base64 -d > data.cdb
-    mv data.cdb /service/tinydns/root/
+    mv data.cdb /etc/tinydns/root/
 }
 cd workdir
 _vault_fetch current
