@@ -8,7 +8,7 @@ RUN ./configure.curvedns
 RUN make
 
 FROM alpine
-RUN apk --no-cache add tinydns libev jq
+RUN apk --no-cache add tinydns libev jq cpulimit
 ADD https://github.com/just-containers/s6-overlay/releases/download/v1.22.1.0/s6-overlay-amd64.tar.gz /tmp/
 RUN tar xzvf /tmp/s6-overlay-amd64.tar.gz -C /
 
